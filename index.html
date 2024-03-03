@@ -1,71 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
-    <div id="container" style="width: 900px; height: 400px;  display: flex; flex-wrap: wrap; flex-basis: 25%; gap:10px; position: relative;;">
-        <div id="one" style="  width:250px; height: 350px;  margin: 10px; padding: 5px;">
-        <img src="images/pictur1.jpg" style="width: 100%; height: 100%;" id="img01">
+
+    <div id="container">
+        <div id="one">
+            <img src="images/pictur1.jpg" id="img01">
 
         </div>
-        <div id="two" style=" width:250px; height: 350px;  margin: 10px; padding: 5px;" >
+        <div id="two" id="img02">
 
-            <img src="images/1-200x300.jpg" style="width: 100%; height: 100%;" id="img02">
+            <img src="images/1-200x300.jpg" id="img02">
         </div>
-        <div id="three" style=" width:250px; height: 350px;  margin: 10px; padding: 10px;">
+        <div id="three">
 
-            <img src="images/picture3.jpg" style="width: 100%; height: 100%;" id="img03">
+            <img src="images/picture3.jpg" id="img03">
         </div>
 
     </div>
 
 
-    <div id ="overlay" style="background-color: white; background-color: rgba(50,50,50,0.5); width: 100%; height: 100%;  position: absolute; top: 0; display: none; ">
-        <p style="position: absolute; top: 0; right: 40px; font-weight: bolder; color:black;" id="Cross">X</p>
-    <div id="zoom1" style="width: 500px; height: 400px; margin: 10px;  position : absolute; margin-top: 250px; margin-left: 500px; display: none; ">
-       <img src="images/pictur1.jpg" style="width: 90%; height: 90%; border: solid white 5px; ">
+    <div id="overlay">
+        <p id="Cross">X</p>
+        <div id="zoom1">
+            <img src="images/pictur1.jpg">
+        </div>
+        <div id="zoom2">
+            <img src="images/1-200x300.jpg">
+        </div>
+        <div id="zoom3">
+            <img src="images/picture3.jpg">
+        </div>
     </div>
-       <div id="zoom2" style="width: 500px; height: 400px; margin: 10px; position : absolute; margin-top: 250px; margin-left: 500px; display: none; ">
-        <img src="images/1-200x300.jpg" style="width: 90%; height: 90%; border: solid white 5px;  ">
-        </div>  
-        <div id="zoom3" style="width: 500px; height: 400px; margin: 10px; position : absolute; margin-top: 250px; margin-left: 500px; display: none; ">
-            <img src="images/picture3.jpg" style="width: 90%; height: 90%; border: solid white 5px;  ">
-            </div>  
-</div>
-    <script>
-     var overlay = document.getElementById("overlay")
-     var cross = document.getElementById("Cross")
-     var one = document.getElementById("one")
-     var two = document.getElementById("two")
-     var three = document.getElementById("three")
-     var zoom2 = document.getElementById("zoom2")
-    var zoom1 = document.getElementById("zoom1")
-     var zoom3 = document.getElementById("zoom3")
-
-     one.addEventListener("click",function(){
-        overlay.style.display ="block"
-        zoom1.style.display = "block"
-        
-     })
-     
-     two.addEventListener("click",function(){
-        overlay.style.display ="block"
-        zoom2.style.display = "block"
-     })
-     three.addEventListener("click",function(){
-        overlay.style.display ="block"
-        zoom3.style.display = "block"
-     })
-     cross.addEventListener("click",function(){
-        overlay.style.display ="none"
-       
-     })
-     
+    <script src="index.js">
 
     </script>
 </body>
+
 </html>
